@@ -10,7 +10,7 @@ to GitHub Pages by GitHub Actions on every push to `main`.
 | `index.html` | The whole page — markup, styles and copy in one file. |
 | `404.html` | Shown for unknown URLs. |
 | `CNAME` | Tells GitHub Pages the custom domain. Do not delete. |
-| `favicon.svg` | Browser tab icon. |
+| `assets/arms/` | The coat of arms, in six versions. See its own README. |
 | `robots.txt`, `sitemap.xml` | For search engines. |
 | `.nojekyll` | Stops GitHub from running Jekyll over the files. |
 | `.github/workflows/deploy.yml` | The deploy job. |

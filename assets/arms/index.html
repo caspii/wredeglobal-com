@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrede arms — versions to choose from</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --ink:#1a1814; --soft:#6b6455; --paper:#faf8f3; --rule:#e2ddd0; }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:3rem 1.5rem 5rem; background:var(--paper); color:var(--ink);
+    font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  h1 { font-family: ui-serif, Georgia, serif; font-weight:500; font-size:2rem; margin:0 0 .4rem; }
+  .blazon { color:var(--soft); max-width:44rem; margin:0 0 3rem; }
+  .blazon em { font-style: italic; }
+
+  .grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); }
+  figure { margin:0; }
+  .plate {
+    display:grid; place-items:center; padding:1.5rem; min-height:210px;
+    background:#fff; border:1px solid var(--rule); border-radius:10px;
+  }
+  .plate + .plate { margin-top:.5rem; }
+  .plate.dark { background:#14130f; border-color:#2c2920; }
+  .plate img { width:120px; height:auto; display:block; }
+  figcaption { margin-top:.6rem; font-size:.8125rem; }
+  figcaption b { display:block; font-weight:600; }
+  figcaption code { display:block; margin-top:.25rem; }
+  figcaption span { color:var(--soft); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.78rem; color:var(--soft); }
+
+  h2 { font-family:ui-serif, Georgia, serif; font-weight:500; font-size:1.25rem;
+       margin:3.5rem 0 1rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  .sizes { display:flex; align-items:flex-end; gap:1.75rem; flex-wrap:wrap; }
+  .sizes figure { text-align:center; }
+  .sizes figcaption { color:var(--soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Arms of Wrede — six versions</h1>
+  <p class="blazon">
+    Blazon: <em>Per pale gules and or, a wreath set with five roses counterchanged.</em>
+    Redrawn from the description and the illustration on
+    <a href="https://www.roskildehistorie.dk/stamtavler/adel/svenske/Wrede/Wredetysk.htm">roskildehistorie.dk</a>.
+    Pick one, then tell me which and I will wire it into the site.
+  </p>
+
+  <div class="grid">
+    <figure>
+      <div class="plate"><img src="arms-heraldic.svg" alt="Heraldic version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-heraldic.svg" alt=""></div>
+      <figcaption><b>Heraldic</b><span>Closest to the source drawing. Veined leaves, barbed and seeded roses.</span><code>arms-heraldic.svg</code></figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="arms-flat.svg" alt="Flat version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-flat.svg" alt=""></div>
+      <figcaption><b>Flat</b><span>No dark outline. Each shape is edged in the opposite tincture.</span><code>arms-flat.svg</code></figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="arms-line.svg" alt="Line version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-line.svg" alt=""></div>
+      <figcaption><b>Line</b><span>One colour. Inline it in HTML and it takes the surrounding text colour. Loaded as an <code>&lt;img&gt;</code> like here, it falls back to dark ink &mdash; which is why it disappears on black below.</span><code>arms-line.svg</code></figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="arms-roundel.svg" alt="Roundel version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-roundel.svg" alt=""></div>
+      <figcaption><b>Roundel</b><span>The same wreath in a circle. Avatars and stamps.</span><code>arms-roundel.svg</code></figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="arms-minimal.svg" alt="Minimal version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-minimal.svg" alt=""></div>
+      <figcaption><b>Minimal</b><span>Roses reduced to rosettes on a plain ring. Holds up small.</span><code>arms-minimal.svg</code></figcaption>
+    </figure>
+    <figure>
+      <div class="plate"><img src="arms-favicon.svg" alt="Favicon version of the Wrede arms"></div>
+      <div class="plate dark"><img src="arms-favicon.svg" alt=""></div>
+      <figcaption><b>Favicon</b><span>Wreath reduced to a ring. The only one legible at 16px.</span><code>arms-favicon.svg</code></figcaption>
+    </figure>
+  </div>
+
+  <h2>The favicon mark at real sizes</h2>
+  <div class="sizes">
+    <figure><img src="arms-favicon.svg" width="16" alt=""><figcaption>16</figcaption></figure>
+    <figure><img src="arms-favicon.svg" width="24" alt=""><figcaption>24</figcaption></figure>
+    <figure><img src="arms-favicon.svg" width="32" alt=""><figcaption>32</figcaption></figure>
+    <figure><img src="arms-favicon.svg" width="48" alt=""><figcaption>48</figcaption></figure>
+    <figure><img src="arms-minimal.svg" width="32" alt=""><figcaption>minimal, 32</figcaption></figure>
+    <figure><img src="arms-heraldic.svg" width="32" alt=""><figcaption>heraldic, 32</figcaption></figure>
+  </div>
+
+</div>
+
+</body>
+</html>
