@@ -3,3 +3,4 @@
 
 # Secrets. Holds CLOUDFLARE_API_TOKEN — must never be committed.
 .env
+.env.*

@@ -19,6 +19,7 @@ to GitHub Pages by GitHub Actions on every push to `main`.
 | `robots.txt`, `sitemap.xml` | For search engines. |
 | `.nojekyll` | Stops GitHub from running Jekyll over the files. |
 | `.github/workflows/deploy.yml` | The deploy job. |
+| `.conductor/settings.toml` | The Conductor **Run** button — a local preview server. |
 
 ## Editing the page
 
@@ -32,14 +33,19 @@ file in `assets/arms/`.
 
 ## Regenerating the icons
 
-The icons are rendered from `assets/arms/arms-favicon.svg` (transparent
-shield) and `assets/arms/arms-icon.svg` (solid tile). Rebuild them with:
+Every icon is rendered from one of the SVGs in `assets/arms/`:
 
 ```sh
-DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib python3 tools/build-icons.py
+python3 tools/build-icons.py                   # rebuild from the current source
+python3 tools/build-icons.py --source roundel  # switch to a different version
+python3 tools/build-icons.py --all             # also rebuild the candidate set
 ```
 
-That needs `pip install cairosvg` and `brew install cairo`.
+That needs `pip install cairosvg` and, on macOS, `brew install cairo`.
+
+`--all` writes a favicon for every version into `assets/arms/favicons/`.
+Open `assets/arms/favicons/index.html` to compare them at 16, 32 and 48px
+before choosing. Only the reduced marks stay readable below 32px.
 
 ## Previewing locally
 
@@ -48,6 +54,9 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
+
+In Conductor, press **Run** instead. `.conductor/settings.toml` starts the same
+server on the workspace's own port, so several workspaces can preview at once.
 
 ## Deploying
 
