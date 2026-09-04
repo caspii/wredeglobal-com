@@ -1,6 +1,6 @@
 # Arms of Wrede
 
-Six SVG versions of the Wrede family arms, drawn from scratch.
+Seven SVG versions of the Wrede family arms, drawn from scratch.
 
 **Blazon:** *Per pale gules and or, a wreath set with five roses counterchanged.*
 
@@ -23,7 +23,8 @@ not reproduced here.
 | `arms-line.svg` | One colour, `fill: none`, inherits `currentColor`. Letterheads and print. Paste it inline in your HTML and it takes the surrounding text colour; loaded through `<img>` it falls back to dark ink and will vanish on a dark background. |
 | `arms-roundel.svg` | The same wreath in a circle. Avatars, stamps, social profiles. |
 | `arms-minimal.svg` | Roses reduced to plain rosettes on a ring. Holds together down to ~28px. |
-| `arms-favicon.svg` | Wreath reduced to a ring, roses dropped. The only version legible at 16px. |
+| `arms-favicon.svg` | Wreath reduced to a ring, roses dropped. The only version legible at 16px. Transparent. |
+| `arms-icon.svg` | The same reduced mark on a solid dark square. Source for `apple-touch-icon.png` and the manifest icons. |
 
 Open `index.html` in a browser to see all six side by side, on light and dark,
 and the favicon at real pixel sizes.
@@ -57,3 +58,10 @@ python3 generate.py
 Edit the constants at the top of `generate.py` to change the shield shape,
 wreath radius, rose size, or how many leaves sit between the roses.
 `arms-favicon.svg` is hand-written and is not touched by the script.
+
+## Where they are used
+
+The four full versions — heraldic, flat, line, roundel — are shown in *The
+arms* section of the site's front page. The heraldic one also heads the page.
+`arms-favicon.svg` and `arms-icon.svg` feed `tools/build-icons.py`, which
+writes `favicon.ico` and the PNG app icons at the repository root.
