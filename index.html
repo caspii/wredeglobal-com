@@ -210,6 +210,30 @@
 
   .cta:hover, .cta:focus-visible { background: var(--accent); color: var(--paper); }
 
+  /* ---------- the whatsapp group ---------- */
+
+  .join {
+    display: grid;
+    gap: 1.75rem 2rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  /* The plate stays light in dark mode, so the code keeps the black-on-white
+     contrast a scanner needs. Pure white, to match the PNG's own quiet zone —
+     the warm --plate would show as a rim around it. */
+  .join .plate { padding: 1.25rem; background: #ffffff; }
+
+  .join .plate img { width: 190px; height: 190px; }
+
+  .join p { margin: 0; font-size: 0.9375rem; text-wrap: pretty; }
+
+  .join .actions { margin: 1.5rem 0 0; }
+
+  @media (max-width: 30rem) {
+    .join { grid-template-columns: 1fr; justify-items: start; }
+  }
+
   /* ---------- history ---------- */
 
   .timeline { list-style: none; margin: 0; padding: 0; }
@@ -359,6 +383,7 @@
     </p>
 
     <nav class="nav" aria-label="Sections">
+      <a href="#group">The group</a>
       <a href="#history">The family</a>
       <a href="#countries">Where we are</a>
       <a href="#arms">The arms</a>
@@ -390,6 +415,32 @@
         <dt>Cost</dt>
         <dd>Still being worked out. We will publish the figure long before anyone has to decide.</dd>
       </dl>
+    </div>
+  </section>
+
+  <section id="group">
+    <h2>The group</h2>
+    <p class="gloss">
+      There is a family WhatsApp group. News about 2028 goes there first, and
+      between now and then it is the easiest way to reach everybody at once.
+    </p>
+
+    <div class="join">
+      <div class="plate">
+        <img src="/assets/whatsapp-qr.png" width="600" height="600"
+             alt="QR code that opens the invitation to the Wrede Global WhatsApp group">
+      </div>
+      <div>
+        <p>
+          Point a phone camera at the code, or press the button. Scanning works
+          from a second phone or from a printed page &mdash; if you are already
+          reading this on the phone you use for WhatsApp, use the button, because
+          you cannot scan your own screen.
+        </p>
+        <p class="actions">
+          <a class="cta" href="https://chat.whatsapp.com/L7cYgpRJuiz1PUM4PPmITf">Join the WhatsApp group</a>
+        </p>
+      </div>
     </div>
   </section>
 
