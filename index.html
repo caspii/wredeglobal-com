@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ==== EDIT THESE ==== -->
-<title>Wrede Global</title>
-<meta name="description" content="Wrede Global — independent software and product ventures.">
+<title>The Wrede family — Germany, Sweden, Finland</title>
+<meta name="description" content="The Wrede family, at home in Germany, Sweden and Finland. The next family gathering is in Stockholm, 15–17 September 2028.">
 <!-- ==================== -->
 
 <link rel="canonical" href="https://wredeglobal.com/">
@@ -14,8 +14,8 @@
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wredeglobal.com/">
-<meta property="og:title" content="Wrede Global">
-<meta property="og:description" content="Wrede Global — independent software and product ventures.">
+<meta property="og:title" content="The Wrede family — Germany, Sweden, Finland">
+<meta property="og:description" content="One family, three countries. The next family gathering is in Stockholm, 15–17 September 2028.">
 <meta property="og:image" content="https://wredeglobal.com/icon-512.png">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)">
@@ -32,6 +32,7 @@
     --ink-soft:  #5c584b;
     --paper:     #faf8f3;
     --plate:     #ffffff;
+    --panel:     #f3efe4;
     --rule:      #e2ddd0;
     --accent:    #9a4b1e;
   }
@@ -42,6 +43,7 @@
       --ink-soft: #a29d90;
       --paper:    #14130f;
       --plate:    #faf8f3;   /* the plates stay light, so the line drawing reads */
+      --panel:    #1d1b15;
       --rule:     #302d25;
       --accent:   #d9a15e;
     }
@@ -49,7 +51,11 @@
 
   *, *::before, *::after { box-sizing: border-box; }
 
-  html { -webkit-text-size-adjust: 100%; }
+  /* Everything below is sized in rem, so this one line scales the whole page.
+     A percentage, so a reader's own browser font size still applies. */
+  html { font-size: 112.5%; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   body {
     margin: 0;
@@ -66,17 +72,17 @@
 
   /* ---------- masthead ---------- */
 
-  .mast { padding: 3.5rem 0 4rem; }
+  .mast { padding: 2rem 0 2.5rem; }
 
   .mark {
     display: block;
-    height: 104px;
+    height: 80px;
     width: auto;
-    margin: 0 0 2rem;
+    margin: 0 0 1.5rem;
   }
 
   .eyebrow {
-    margin: 0 0 2.25rem;
+    margin: 0 0 1.5rem;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
@@ -97,27 +103,30 @@
   h1 .of { display: block; color: var(--accent); }
 
   .lede {
-    margin: 1.75rem 0 0;
-    max-width: 30rem;
+    margin: 1.25rem 0 0;
+    max-width: 32rem;
     color: var(--ink-soft);
     text-wrap: pretty;
   }
 
-  .rule {
-    width: 3rem; height: 1px;
-    margin: 2.5rem 0;
-    border: 0;
-    background: var(--rule);
-  }
-
-  .contact {
+  .nav {
+    margin: 2rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
   }
 
-  /* ---------- the arms ---------- */
+  .mast .where { margin: 1rem 0 0; font-size: 1.125rem; }
 
-  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+  .mast .countdown { margin: 1.5rem 0 0; }
+
+  .mast .actions { margin: 1.5rem 0 0; }
+
+  /* ---------- sections ---------- */
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); scroll-margin-top: 1.5rem; }
 
   h2 {
     margin: 0 0 1.25rem;
@@ -126,18 +135,138 @@
     letter-spacing: -0.01em;
   }
 
-  .blazon {
-    margin: 0 0 0.75rem;
-    font-style: italic;
-    color: var(--accent);
-  }
-
   .gloss {
     margin: 0 0 2.75rem;
     max-width: 32rem;
     font-size: 0.9375rem;
     color: var(--ink-soft);
     text-wrap: pretty;
+  }
+
+  /* ---------- the gathering ---------- */
+
+  .panel {
+    padding: 2.25rem 2rem 2.5rem;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+  }
+
+  .where { margin: 0; font-style: italic; color: var(--accent); }
+
+  .countdown {
+    margin: 1.25rem 0 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+
+  .facts {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .facts dt {
+    margin: 0;
+    padding-top: 0.2rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .facts dd { margin: 0; text-wrap: pretty; }
+
+  @media (max-width: 30rem) {
+    .panel { padding: 1.75rem 1.25rem 2rem; }
+    .facts { grid-template-columns: 1fr; gap: 0.25rem; }
+    .facts dd { margin-bottom: 1rem; }
+    .facts dd:last-child { margin-bottom: 0; }
+  }
+
+  .actions {
+    margin: 2.25rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.9375rem;
+  }
+
+  .cta {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .cta:hover, .cta:focus-visible { background: var(--accent); color: var(--paper); }
+
+  /* ---------- history ---------- */
+
+  .timeline { list-style: none; margin: 0; padding: 0; }
+
+  .timeline li {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 0.25rem 1.5rem;
+    padding: 1.125rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .timeline li:first-child { padding-top: 0; border-top: 0; }
+
+  .timeline .yr {
+    padding-top: 0.2rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+  }
+
+  .timeline p { margin: 0; font-size: 0.9375rem; text-wrap: pretty; }
+
+  @media (max-width: 30rem) {
+    .timeline li { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- the three countries ---------- */
+
+  .branches {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  }
+
+  .branches li { padding-top: 0.9rem; border-top: 2px solid var(--accent); }
+
+  .branches h3 {
+    margin: 0 0 0.4rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .branches p { margin: 0; font-size: 0.9375rem; color: var(--ink-soft); text-wrap: pretty; }
+
+  /* ---------- the arms ---------- */
+
+  .blazon {
+    margin: 0 0 0.75rem;
+    font-style: italic;
+    color: var(--accent);
   }
 
   .plates {
@@ -181,7 +310,7 @@
     text-decoration-color: var(--rule);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.25em;
-    transition: color 120ms ease, text-decoration-color 120ms ease;
+    transition: color 120ms ease, text-decoration-color 120ms ease, background-color 120ms ease;
   }
 
   a:hover, a:focus-visible { color: var(--accent); text-decoration-color: currentColor; }
@@ -196,7 +325,8 @@
     color: var(--ink-soft);
   }
 
-  footer p { margin: 0; }
+  footer p { margin: 0 0 0.5rem; }
+  footer p:last-child { margin: 0; }
 </style>
 </head>
 <body>
@@ -209,27 +339,118 @@
          alt="Arms of Wrede: per pale gules and or, a wreath set with five roses counterchanged">
 
     <!-- ==== EDIT THE COPY BELOW ==== -->
-    <p class="eyebrow">Wrede Global</p>
+    <p class="eyebrow">Wrede &middot; Germany &middot; Sweden &middot; Finland</p>
 
     <h1>
-      Something
-      <span class="of">is being built.</span>
+      The family gathering,
+      <span class="of">Stockholm 2028.</span>
     </h1>
 
+    <p class="where">Friday 15 to Sunday 17 September 2028</p>
+
     <p class="lede">
-      A fuller site is on the way. Until then, the door is open —
-      write and we will answer.
+      Every branch of the family, in one city, for one weekend.
     </p>
 
-    <hr class="rule">
+    <p class="countdown" id="countdown"></p>
 
-    <p class="contact">
-      <a href="mailto:hello@wredeglobal.com">hello@wredeglobal.com</a>
+    <p class="actions">
+      <a class="cta" href="/wrede-gathering-2028.ics" download>Add it to your calendar</a>
     </p>
-    <!-- ============================= -->
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#history">The family</a>
+      <a href="#countries">Where we are</a>
+      <a href="#arms">The arms</a>
+    </nav>
   </header>
 
-  <section>
+  <section id="gathering">
+    <h2>The weekend</h2>
+    <p class="gloss">
+      Planning has started. Nothing is booked yet, so nothing is asked of you
+      yet. The venue, the programme and the cost will be posted on this page as
+      they are settled. Put the date in your calendar and look again later.
+    </p>
+
+    <div class="panel">
+      <dl class="facts">
+        <dt>When</dt>
+        <dd>The weekend of 15 September 2028. Friday evening to Sunday afternoon.</dd>
+
+        <dt>Where</dt>
+        <dd>Stockholm, Sweden. The venue is being chosen and will be announced here.</dd>
+
+        <dt>Who</dt>
+        <dd>Every branch of the family, and everyone who has married into it. Children are welcome.</dd>
+
+        <dt>What</dt>
+        <dd>A dinner, a day together in the city, and time to meet the people you have only seen on the family tree.</dd>
+
+        <dt>Cost</dt>
+        <dd>Still being worked out. We will publish the figure long before anyone has to decide.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="history">
+    <h2>The family</h2>
+    <p class="gloss">
+      The Wredes have lived around the Baltic Sea for centuries — in Germany,
+      in Sweden and in Finland. The name begins in the north-west of Germany
+      and travels north: soldiers, then officials, then farmers, engineers and
+      everything since. A short version, in five stops.
+    </p>
+
+    <ul class="timeline">
+      <li>
+        <span class="yr">1400s</span>
+        <p><b>Westphalia.</b> The family is first recorded in north-west Germany, where the name comes from.</p>
+      </li>
+      <li>
+        <span class="yr">1605</span>
+        <p><b>Kircholm.</b> Henrik Wrede gives his own horse to King Karl IX of Sweden in the middle of the battle, and is killed. The Crown grants his family the Elimäki estate in Finland. The Finnish branch, Wrede af Elimä, starts there.</p>
+      </li>
+      <li>
+        <span class="yr">1600s</span>
+        <p><b>Stockholm.</b> Fabian Wrede sits on the Council of the Realm and runs the Swedish Crown's finances. The Swedish branch settles in.</p>
+      </li>
+      <li>
+        <span class="yr">1814</span>
+        <p><b>Bavaria.</b> Carl Philipp von Wrede, a field marshal, is made a prince. The German line keeps its own path.</p>
+      </li>
+      <li>
+        <span class="yr">Today</span>
+        <p><b>Three countries.</b> Wredes live in Germany, Sweden and Finland, and in a good many places beyond them.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="countries">
+    <h2>Where we are</h2>
+    <p class="gloss">
+      Three countries, three languages, one name. The branches have been apart
+      long enough to be genuinely different, and close enough to still recognise
+      each other.
+    </p>
+
+    <ul class="branches">
+      <li>
+        <h3>Germany</h3>
+        <p>Where the name starts. Westphalia first, later Bavaria and the rest of the country.</p>
+      </li>
+      <li>
+        <h3>Sweden</h3>
+        <p>In Crown service from the 1500s onwards. Stockholm is still the family's easiest meeting point, which is why 2028 is held there.</p>
+      </li>
+      <li>
+        <h3>Finland</h3>
+        <p>The Elimäki grant of 1605 made Finland a Wrede home, and it has been one ever since.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="arms">
     <h2>The arms</h2>
     <p class="blazon">Per pale gules and or, a wreath set with five roses counterchanged.</p>
     <p class="gloss">
@@ -271,16 +492,56 @@
         <figcaption><b>Roundel</b><span>The same wreath in a circle.</span></figcaption>
       </figure></li>
     </ul>
+    <!-- ============================= -->
   </section>
 
   <footer>
-    <p>&copy; <span id="year">2026</span> Wrede Global</p>
+    <p>&copy; <span id="year">2026</span> The Wrede family</p>
+    <p>Germany &middot; Sweden &middot; Finland</p>
   </footer>
 
 </div>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Wrede family gathering 2028",
+  "startDate": "2028-09-15",
+  "endDate": "2028-09-17",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Stockholm",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE"
+    }
+  },
+  "description": "The Wrede family gathering, held in Stockholm over the weekend of 15 September 2028.",
+  "url": "https://wredeglobal.com/#gathering"
+}
+</script>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function () {
+    var el = document.getElementById('countdown');
+    if (!el) return;
+    var day = 86400000;
+    var start = Date.UTC(2028, 8, 15);
+    var today = new Date();
+    var now = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+    var days = Math.round((start - now) / day);
+
+    if (days > 1)       el.textContent = days.toLocaleString() + ' days from today';
+    else if (days === 1) el.textContent = 'Tomorrow';
+    else if (days === 0) el.textContent = 'Today';
+    else if (days > -3)  el.textContent = 'Happening now';
+  })();
 </script>
 
 </body>
