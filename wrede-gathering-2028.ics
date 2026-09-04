@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wrede//Family Gathering 2028//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wrede-family-gathering-2028@wredeglobal.com
+DTSTAMP:20260904T000000Z
+DTSTART;VALUE=DATE:20280915
+DTEND;VALUE=DATE:20280918
+SUMMARY:Wrede family gathering
+LOCATION:Stockholm, Sweden
+DESCRIPTION:The Wrede family gathering. Friday 15 to Sunday 17 Sept
+ ember 2028 in Stockholm. Programme and venue at https://wredeglobal
+ .com/
+URL:https://wredeglobal.com/#gathering
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
