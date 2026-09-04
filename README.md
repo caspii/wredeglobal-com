@@ -9,6 +9,7 @@ to GitHub Pages by GitHub Actions on every push to `main`.
 | --- | --- |
 | `index.html` | The whole page — markup, styles and copy in one file. |
 | `wrede-gathering-2028.ics` | The calendar file behind "Add it to your calendar". |
+| `assets/whatsapp-qr.png` | The QR code behind "Join the WhatsApp group". |
 | `404.html` | Shown for unknown URLs. |
 | `assets/arms/` | The coat of arms, in six versions. See its own README. |
 | `favicon.ico` | 16–64px, for browsers that ignore the SVG. |
@@ -31,9 +32,9 @@ the top of the `<style>` block, with dark-mode versions below them.
 
 The masthead (`header.mast`) is the gathering announcement, and it is sized to
 fit on one phone screen without scrolling. If you add a line to it, check that
-it still does — see "Above the fold" below. Four sections follow: the weekend,
-the family, where we are, and the arms. The nav links point at their `id`s, so
-renaming a section means updating both.
+it still does — see "Above the fold" below. Five sections follow: the weekend,
+the group, the family, where we are, and the arms. The nav links point at their
+`id`s, so renaming a section means updating both.
 
 There is deliberately no email address on the page — see the note below.
 
@@ -60,6 +61,35 @@ There is no "tell us you are coming" link, because there is no mailbox behind
 it yet. When one exists, put it back as a second `<a class="cta">` in
 `<p class="actions">`, next to the calendar download.
 
+### The WhatsApp group
+
+`<section id="group">` holds the invitation to the family WhatsApp group. Two
+things point at the same group and must agree:
+
+1. `assets/whatsapp-qr.png` — the code, cropped out of WhatsApp's own
+   "share group" screenshot and reduced to pure black and white. It carries
+   about five modules of white quiet zone; do not crop that off, and do not put
+   it on a coloured background, or cameras stop reading it.
+2. The `href` on `a.cta` in that section —
+   `https://chat.whatsapp.com/L7cYgpRJuiz1PUM4PPmITf`.
+
+The code and the link are the same invitation. WhatsApp's own code carries
+extra tracking parameters (`?s=qs&p=i&…`); the button uses the bare form,
+which resolves to the same group.
+
+If the group's invite link is ever reset, both have to be replaced. Take a
+fresh screenshot from WhatsApp, then crop and clean it:
+
+```python
+from PIL import Image
+im = Image.open('new-screenshot.jpeg').convert('L')
+im.crop(BOX).point(lambda v: 0 if v < 128 else 255, mode='1').save('assets/whatsapp-qr.png')
+```
+
+`.join .plate` is pure white rather than `--plate`, because the PNG's own quiet
+zone is pure white and the warm plate colour would show as a rim around it in
+dark mode.
+
 ### Above the fold
 
 The whole masthead is meant to be visible on a phone without scrolling: the
@@ -72,6 +102,10 @@ To check, serve the site and open a page holding it in a fixed-size frame:
 ```html
 <iframe src="http://localhost:8000/" style="width:390px;height:730px"></iframe>
 ```
+
+At the time of writing the nav ends 721px down, against a 730px budget. The
+fourth nav link ("The group") is what wraps it onto a second line and spends
+most of the slack, so there is now very little left.
 
 If it no longer fits, the cheapest things to give up are, in order: the
 one-line description under the dates, the nav, and `.mark`'s height.
