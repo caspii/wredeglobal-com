@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 238" width="200" height="238" role="img" aria-labelledby="arms-minimal-t">
+  <title id="arms-minimal-t">Arms of the Wrede family: per pale gules and or, a wreath set with five roses counterchanged</title>
+  <defs>
+    <clipPath id="arms-minimal-field"><path d="M10 10H190V128C190 172 158 206 100 229C42 206 10 172 10 128Z"/></clipPath>
+    <clipPath id="arms-minimal-dx"><rect x="0" y="0" width="100" height="238"/></clipPath>
+    <clipPath id="arms-minimal-sn"><rect x="100" y="0" width="100" height="238"/></clipPath>
+    <g id="arms-minimal-wreath">
+    <circle cx="100" cy="114" r="58" fill="none" stroke="currentColor" stroke-width="10"/>
+    <g transform="translate(100,56) rotate(0)"><g transform="scale(0.95)"><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(0)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(72)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(144)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(216)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(288)"/><circle r="5.4" fill="#f6ecc9"/></g></g>
+    <g transform="translate(155.16,96.08) rotate(72)"><g transform="scale(0.95)"><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(0)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(72)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(144)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(216)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(288)"/><circle r="5.4" fill="#f6ecc9"/></g></g>
+    <g transform="translate(134.09,160.92) rotate(144)"><g transform="scale(0.95)"><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(0)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(72)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(144)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(216)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(288)"/><circle r="5.4" fill="#f6ecc9"/></g></g>
+    <g transform="translate(65.91,160.92) rotate(216)"><g transform="scale(0.95)"><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(0)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(72)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(144)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(216)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(288)"/><circle r="5.4" fill="#f6ecc9"/></g></g>
+    <g transform="translate(44.84,96.08) rotate(288)"><g transform="scale(0.95)"><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(0)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(72)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(144)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(216)"/><path d="M-7,-6C-13.4,-11 -11.2,-20 0,-20C11.2,-20 13.4,-11 7,-6Z" transform="rotate(288)"/><circle r="5.4" fill="#f6ecc9"/></g></g>
+    </g>
+  </defs>
+
+  <g clip-path="url(#arms-minimal-field)">
+    <rect x="0" y="0" width="100" height="238" fill="#d9271b"/>
+    <rect x="100" y="0" width="100" height="238" fill="#f9c301"/>
+    <use href="#arms-minimal-wreath" fill="#f9c301" color="#f9c301" clip-path="url(#arms-minimal-dx)" stroke="#d9271b" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+    <use href="#arms-minimal-wreath" fill="#d9271b" color="#d9271b" clip-path="url(#arms-minimal-sn)" stroke="#f9c301" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+</svg>

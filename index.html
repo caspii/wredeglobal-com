@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==== EDIT THESE ==== -->
+<title>Wrede Global</title>
+<meta name="description" content="Wrede Global — independent software and product ventures.">
+<!-- ==================== -->
+
+<link rel="canonical" href="https://wredeglobal.com/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wredeglobal.com/">
+<meta property="og:title" content="Wrede Global">
+<meta property="og:description" content="Wrede Global — independent software and product ventures.">
+<meta property="og:image" content="https://wredeglobal.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<style>
+  :root {
+    --ink:       #16150f;
+    --ink-soft:  #5c584b;
+    --paper:     #faf8f3;
+    --plate:     #ffffff;
+    --rule:      #e2ddd0;
+    --accent:    #9a4b1e;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink:      #f2efe6;
+      --ink-soft: #a29d90;
+      --paper:    #14130f;
+      --plate:    #faf8f3;   /* the plates stay light, so the line drawing reads */
+      --rule:     #302d25;
+      --accent:   #d9a15e;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 2rem 1.5rem;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-serif, Iowan Old Style, Palatino, "Palatino Linotype", Georgia, serif;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 46rem; margin: 0 auto; }
+
+  /* ---------- masthead ---------- */
+
+  .mast { padding: 3.5rem 0 4rem; }
+
+  .mark {
+    display: block;
+    height: 104px;
+    width: auto;
+    margin: 0 0 2rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 2.25rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 1.7rem + 3.6vw, 4rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+
+  h1 .of { display: block; color: var(--accent); }
+
+  .lede {
+    margin: 1.75rem 0 0;
+    max-width: 30rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  .rule {
+    width: 3rem; height: 1px;
+    margin: 2.5rem 0;
+    border: 0;
+    background: var(--rule);
+  }
+
+  .contact {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.9375rem;
+  }
+
+  /* ---------- the arms ---------- */
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--rule); }
+
+  h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .blazon {
+    margin: 0 0 0.75rem;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .gloss {
+    margin: 0 0 2.75rem;
+    max-width: 32rem;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  .plates {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .plates li { margin: 0; }
+
+  .plate {
+    display: grid;
+    place-items: center;
+    padding: 1.75rem 1rem;
+    background: var(--plate);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+  }
+
+  .plate img { height: 116px; width: auto; display: block; }
+
+  .plates figcaption {
+    margin-top: 0.75rem;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+  }
+
+  .plates b { display: block; font-weight: 600; }
+  .plates span { color: var(--ink-soft); }
+
+  .plates figure { margin: 0; }
+
+  /* ---------- links & footer ---------- */
+
+  a {
+    color: inherit;
+    text-decoration-color: var(--rule);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+    transition: color 120ms ease, text-decoration-color 120ms ease;
+  }
+
+  a:hover, a:focus-visible { color: var(--accent); text-decoration-color: currentColor; }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+
+  footer {
+    padding: 2.5rem 0 3rem;
+    border-top: 1px solid var(--rule);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  footer p { margin: 0; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="mast">
+    <!-- Swap the src for any file in /assets/arms to change the mark. -->
+    <img class="mark" src="/assets/arms/arms-heraldic.svg" width="200" height="238"
+         alt="Arms of Wrede: per pale gules and or, a wreath set with five roses counterchanged">
+
+    <!-- ==== EDIT THE COPY BELOW ==== -->
+    <p class="eyebrow">Wrede Global</p>
+
+    <h1>
+      Something
+      <span class="of">is being built.</span>
+    </h1>
+
+    <p class="lede">
+      A fuller site is on the way. Until then, the door is open —
+      write and we will answer.
+    </p>
+
+    <hr class="rule">
+
+    <p class="contact">
+      <a href="mailto:hello@wredeglobal.com">hello@wredeglobal.com</a>
+    </p>
+    <!-- ============================= -->
+  </header>
+
+  <section>
+    <h2>The arms</h2>
+    <p class="blazon">Per pale gules and or, a wreath set with five roses counterchanged.</p>
+    <p class="gloss">
+      A shield split red and gold, carrying a garland of five roses in the
+      opposite colour. Four drawings of the one blazon — the written
+      description is the arms; the picture is only ever an interpretation.
+    </p>
+
+    <ul class="plates">
+      <li><figure>
+        <div class="plate">
+          <img src="/assets/arms/arms-heraldic.svg" width="200" height="238"
+               alt="Heraldic version of the arms of Wrede">
+        </div>
+        <figcaption><b>Heraldic</b><span>Veined leaves, barbed and seeded roses.</span></figcaption>
+      </figure></li>
+
+      <li><figure>
+        <div class="plate">
+          <img src="/assets/arms/arms-flat.svg" width="200" height="238"
+               alt="Flat version of the arms of Wrede">
+        </div>
+        <figcaption><b>Flat</b><span>No outline. Each shape edged in the opposite tincture.</span></figcaption>
+      </figure></li>
+
+      <li><figure>
+        <div class="plate">
+          <img src="/assets/arms/arms-line.svg" width="200" height="238"
+               alt="Line version of the arms of Wrede">
+        </div>
+        <figcaption><b>Line</b><span>One colour, for print and letterheads.</span></figcaption>
+      </figure></li>
+
+      <li><figure>
+        <div class="plate">
+          <img src="/assets/arms/arms-roundel.svg" width="200" height="228"
+               alt="Roundel version of the arms of Wrede">
+        </div>
+        <figcaption><b>Roundel</b><span>The same wreath in a circle.</span></figcaption>
+      </figure></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Wrede Global</p>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
