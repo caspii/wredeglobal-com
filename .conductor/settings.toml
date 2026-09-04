@@ -1,0 +1,14 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+# Static files, no build step and no shared state, so workspaces can serve at
+# the same time. Each one gets its own $CONDUCTOR_PORT.
+[scripts]
+run_mode = "concurrent"
+
+# Serves the workspace directory the way GitHub Pages serves the repository.
+# $CONDUCTOR_PORT only exists on the Mac, hence available_in.
+[scripts.run.preview]
+command = "python3 -m http.server --bind 127.0.0.1 $CONDUCTOR_PORT"
+available_in = [ "local" ]
+default = true
+icon = "globe"

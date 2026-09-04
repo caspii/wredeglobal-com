@@ -19,6 +19,7 @@ to GitHub Pages by GitHub Actions on every push to `main`.
 | `robots.txt`, `sitemap.xml` | For search engines. |
 | `.nojekyll` | Stops GitHub from running Jekyll over the files. |
 | `.github/workflows/deploy.yml` | The deploy job. |
+| `.conductor/settings.toml` | The Conductor **Run** button — a local preview server. |
 
 ## Editing the page
 
@@ -53,6 +54,9 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
+
+In Conductor, press **Run** instead. `.conductor/settings.toml` starts the same
+server on the workspace's own port, so several workspaces can preview at once.
 
 ## Deploying
 
